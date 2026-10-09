@@ -59,9 +59,21 @@ Lab/
 └── reports/                  báo cáo sinh ra (bạn commit vào repo nộp)
 ```
 
-Mỗi tệp "SINH VIÊN CÀI ĐẶT" là **pseudo-code chạy được** (import được): các hàm có docstring mô tả việc cần làm, các `TODO n` đánh số theo `GUIDE.md`, thân hàm đang `raise NotImplementedError`.
+Các tệp "SINH VIÊN CÀI ĐẶT" đã được triển khai theo các phần bắt buộc của `GUIDE.md`. Mọi `TODO n`, comment và pseudo-code gốc được giữ lại để đối chiếu; comment tiếng Việt giải thích cách xử lý. Trong `agents.py`, các chuỗi `*_PROMPT_GUIDANCE` giữ đề bài gốc, còn các chuỗi `*_PROMPT` là hướng dẫn thực sự gửi cho model. Phần mở rộng (GUIDE 6) không được triển khai.
 
 ## 4. Cài đặt
+
+Trên **Windows / PowerShell**, chạy từ thư mục repo (nếu đã có `.venv` thì bỏ lệnh tạo môi trường):
+
+```powershell
+py -3.11 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+if (-not (Test-Path .env)) { Copy-Item .env.example .env }
+```
+
+Điền khóa trong `.env`. Ví dụ chọn `LAB_MODEL=openai:gpt-6-luna` và `OPENAI_API_KEY`, cùng `DAYTONA_API_KEY` và `EXA_API_KEY`. Với các bản thư viện được ghim trong repo, `langchain-openai` tự dùng Responses API khi GPT-6 gọi công cụ; không cần sửa `model.py`. Model/provider khác phải hỗ trợ tool calling và có gói tích hợp LangChain tương ứng.
+
+Trên **Linux / macOS**:
 
 ```bash
 python3 -m venv .venv && source .venv/bin/activate      # Python 3.11+
@@ -91,6 +103,31 @@ python research.py "survey about world model"
 ```
 
 Kết quả nằm ở `reports/survey-about-world-model.md` cùng `.sources.json` và `.meta.json`.
+
+Trên PowerShell, dùng `.\.venv\Scripts\python.exe` thay cho `python`. Kiểm tra offline trước khi gọi dịch vụ thật:
+
+```powershell
+.\.venv\Scripts\python.exe -m unittest discover -s tests -v
+.\.venv\Scripts\python.exe tools.py
+.\.venv\Scripts\python.exe research.py "survey about world model"
+.\.venv\Scripts\python.exe self_check.py
+```
+
+Các test dùng dữ liệu giả trong thư mục tạm, không gọi API và không tạo báo cáo nộp bài. `tools.py` gọi mạng thật và trả mã thoát 1 nếu một nguồn lỗi/rỗng. `research.py` in tên công cụ để theo dõi tiến độ, kiểm tra lại script được upload, chạy finalizer/validator trong sandbox trước khi tải về và chỉ lưu đầu ra hợp lệ. Mã thoát: 0 thành công, 1 chạy thất bại, 2 thiếu chủ đề.
+
+Để chạy đủ năm chủ đề từ `topics.md` trên PowerShell, dừng ngay nếu có lần chạy thất bại:
+
+```powershell
+Get-Content topics.md | ForEach-Object {
+    if ($_ -match '^\d+\. (.+)$') {
+        & .\.venv\Scripts\python.exe research.py $Matches[1]
+        if ($LASTEXITCODE -ne 0) { throw 'Research failed; fix the error before continuing.' }
+    }
+}
+.\.venv\Scripts\python.exe self_check.py
+```
+
+Đọc kết quả: `.md` là báo cáo tiếng Anh; `.sources.json` ánh xạ số trích dẫn sang URL; `.meta.json` ghi topic, model, thời gian, tool calls, số nguồn và họ nguồn. Hai tệp nội dung được lưu nguyên bytes tải từ sandbox; không chỉnh sửa báo cáo trên host. Token trong metadata chỉ tính lead, không phải tổng chi phí hệ thống. Giới hạn bắt buộc: lead 150 model calls / 300 tool calls, researcher 40 / 60, citation-checker 20 / 30; graph lead có `recursion_limit=1000`. Helper `general-purpose` mặc định được giới hạn 2 / 2 và không tham gia nghiên cứu.
 
 ## 6. Chủ đề và nộp bài
 

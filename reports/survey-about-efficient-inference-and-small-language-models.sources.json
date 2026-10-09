@@ -1,0 +1,58 @@
+[
+  {
+    "n": 1,
+    "id": "2305.07804",
+    "url": "https://huggingface.co/papers/2305.07804",
+    "title": "Dr. LLaMA: Improving Small Language Models in Domain-Specific QA via Generative Data Augmentation",
+    "date": "2023-05-12",
+    "source": "hf-search"
+  },
+  {
+    "n": 2,
+    "id": "2610.09209",
+    "url": "https://arxiv.org/abs/2610.09209",
+    "title": "Multi-Objective Aligned Small Language Model Framework for SUD Patient Dialogue Generation",
+    "date": "2026-10-06",
+    "source": "arxiv"
+  },
+  {
+    "n": 3,
+    "id": "https://www.ibm.com/think/topics/small-language-models",
+    "url": "https://www.ibm.com/think/topics/small-language-models",
+    "title": "What are Small Language Models (SLM)? - IBM",
+    "date": "2024-11-05",
+    "source": "web"
+  },
+  {
+    "n": 4,
+    "id": "2411.03350",
+    "url": "https://huggingface.co/papers/2411.03350",
+    "title": "A Comprehensive Survey of Small Language Models in the Era of Large Language Models: Techniques, Enhancements, Applications, Collaboration with LLMs, and Trustworthiness",
+    "date": "2024-11-04",
+    "source": "hf-search"
+  },
+  {
+    "n": 5,
+    "id": "2605.02363",
+    "url": "https://huggingface.co/papers/2605.02363",
+    "title": "When Correct Isn't Usable: Improving Structured Output Reliability in Small Language Models",
+    "date": "2026-05-04",
+    "source": "hf-search"
+  },
+  {
+    "n": 6,
+    "id": "2412.19785",
+    "url": "https://huggingface.co/papers/2412.19785",
+    "title": "Enhancing Whisper's Accuracy and Speed for Indian Languages through Prompt-Tuning and Tokenization",
+    "date": "2024-12-27",
+    "source": "hf-search"
+  },
+  {
+    "n": 7,
+    "id": "2401.14109",
+    "url": "https://huggingface.co/papers/2401.14109",
+    "title": "CompactifAI: Extreme Compression of Large Language Models using Quantum-Inspired Tensor Networks",
+    "date": "2024-01-25",
+    "source": "hf-search"
+  }
+]

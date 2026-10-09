@@ -1,0 +1,82 @@
+[
+  {
+    "n": 1,
+    "id": "2609.19074",
+    "url": "https://arxiv.org/abs/2609.19074",
+    "title": "RLLBC-Lib: An Educational Code Library for Reinforcement Learning and Learning-Based Control",
+    "date": "2026-09-16",
+    "source": "arxiv"
+  },
+  {
+    "n": 2,
+    "id": "2610.12061",
+    "url": "https://arxiv.org/abs/2610.12061",
+    "title": "When Should Agents Think? Adaptive Reasoning via Cross-Turn Estimation",
+    "date": "2026-10-08",
+    "source": "arxiv"
+  },
+  {
+    "n": 3,
+    "id": "2609.04415",
+    "url": "https://arxiv.org/abs/2609.04415",
+    "title": "REFINE: LLM Refinement over Budgeted Text-Attributed Graphs for Personalized Medical Concept Representation",
+    "date": "2026-09-03",
+    "source": "arxiv"
+  },
+  {
+    "n": 4,
+    "id": "2512.12576",
+    "url": "https://huggingface.co/papers/2512.12576",
+    "title": "Coupled Variational Reinforcement Learning for Language Model General Reasoning",
+    "date": "2025-12-14",
+    "source": "hf-search"
+  },
+  {
+    "n": 5,
+    "id": "2610.11959",
+    "url": "https://huggingface.co/papers/2610.11959",
+    "title": "MiMo-V2.6: Scaling Reinforcement Learning Towards Self-Improvement",
+    "date": "2026-10-08",
+    "source": "hf-daily"
+  },
+  {
+    "n": 6,
+    "id": "2511.07317",
+    "url": "https://huggingface.co/papers/2511.07317",
+    "title": "RLVE: Scaling Up Reinforcement Learning for Language Models with Adaptive Verifiable Environments",
+    "date": "2025-11-10",
+    "source": "hf-search"
+  },
+  {
+    "n": 7,
+    "id": "2509.08827",
+    "url": "https://www.alphaxiv.org/abs/2509.08827",
+    "title": "A Survey of Reinforcement Learning for Large Reasoning Models",
+    "date": "2025-10-09",
+    "source": "web"
+  },
+  {
+    "n": 8,
+    "id": "2601.03715",
+    "url": "https://huggingface.co/papers/2601.03715",
+    "title": "R^3L: Reflect-then-Retry Reinforcement Learning with Language-Guided Exploration",
+    "date": "2026-01-07",
+    "source": "hf-search"
+  },
+  {
+    "n": 9,
+    "id": "2610.12341",
+    "url": "https://arxiv.org/abs/2610.12341",
+    "title": "Can AI Agents Learn Their Way to the Top? Evaluating Heuristic Learning in a Long-Running Game Agent Competition",
+    "date": "2026-10-08",
+    "source": "arxiv"
+  },
+  {
+    "n": 10,
+    "id": "2510.02230",
+    "url": "https://huggingface.co/papers/2510.02230",
+    "title": "The Reasoning Boundary Paradox: How Reinforcement Learning Constrains Language Models",
+    "date": "2025-10-02",
+    "source": "hf-search"
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "n": 1,
+    "id": "2222.00001",
+    "url": "https://arxiv.org/abs/2222.00001",
+    "title": "Wow! a Video Generation Model",
+    "date": "2025-02-01",
+    "source": "arxiv"
+  },
+  {
+    "n": 2,
+    "id": "2222.00002",
+    "url": "https://huggingface.co/papers/2222.00002",
+    "title": "Transformers for Video Generation",
+    "date": "2025-03-15",
+    "source": "hf-daily"
+  },
+  {
+    "n": 3,
+    "id": "3333.00003",
+    "url": "https://huggingface.co/papers/3333.00003",
+    "title": "Unified Generative Models",
+    "date": "2025-03-20",
+    "source": "hf-search"
+  },
+  {
+    "n": 4,
+    "id": "4444.00004",
+    "url": "https://example.com/4444.00004",
+    "title": "Incorporating Audio and Visuals in Generation",
+    "date": "2025-02-10",
+    "source": "web"
+  },
+  {
+    "n": 5,
+    "id": "5555.00005",
+    "url": "https://arxiv.org/abs/5555.00005",
+    "title": "Technical Challenges in Video Generation",
+    "date": "2025-04-05",
+    "source": "arxiv"
+  },
+  {
+    "n": 6,
+    "id": "6666.00006",
+    "url": "https://huggingface.co/papers/6666.00006",
+    "title": "Ethical Implications of AI in Generation",
+    "date": "2025-05-11",
+    "source": "hf-search"
+  },
+  {
+    "n": 7,
+    "id": "7777.00007",
+    "url": "https://example.com/7777.00007",
+    "title": "AI in Education: Transforming Learning through Videos",
+    "date": "2025-06-10",
+    "source": "web"
+  },
+  {
+    "n": 8,
+    "id": "8888.00008",
+    "url": "https://huggingface.co/papers/8888.00008",
+    "title": "Gamification and AI in Entertainment",
+    "date": "2025-07-15",
+    "source": "hf-daily"
+  }
+]
